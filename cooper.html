@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper — Build a business in minutes, give it away forever | Rohit Bag</title>
+    <meta name="description" content="Cooper creates AI-built businesses for people — idea to execution. Each startup is generated, tested, automated, and gifted to someone ready to run it.">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/main.css">
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/bootstrap-custom.css">
+    
+    <style>
+        body {
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+            color: #9f9f9f;
+        }
+        
+        .cooper-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .hero-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .cooper-logo {
+            font-size: 64px;
+            font-weight: 700;
+            color: #0079FF;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        
+        .hero-title {
+            color: #f0f0f0;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            color: #cecece;
+            font-size: 24px;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .hero-description {
+            color: #9f9f9f;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        .flow-section {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(0, 121, 255, 0.2);
+        }
+        
+        .flow-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .flow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .flow-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: #0079FF;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 auto 20px;
+        }
+        
+        .step-title {
+            color: #f0f0f0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .step-description {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+        
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #0079FF;
+        }
+        
+        .feature-title {
+            color: #f0f0f0;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .cta-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-description {
+            color: #9f9f9f;
+            font-size: 18px;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
+        .waitlist-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .waitlist-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #f0f0f0;
+            font-size: 16px;
+        }
+        
+        .waitlist-input::placeholder {
+            color: #9f9f9f;
+        }
+        
+        .waitlist-input:focus {
+            outline: none;
+            border-color: #0079FF;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        
+        .waitlist-button {
+            background-color: #0079FF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .waitlist-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .back-to-home a {
+            display: flex;
+            align-items: center;
+            color: #cecece;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            color: #f0f0f0;
+        }
+        
+        .back-to-home img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .timeline-section {
+            margin-bottom: 80px;
+        }
+        
+        .timeline-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid #0079FF;
+        }
+        
+        .timeline-date {
+            color: #0079FF;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .flow-section {
+                padding: 40px 20px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .waitlist-form {
+                flex-direction: column;
+            }
+            
+            .waitlist-input {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="rohitbag233/rohitbag233/img/TigerRohitLOGO.png" alt="Rohit Bag Logo">
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <div class="cooper-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="cooper-logo">COOPER</div>
+            <h1 class="hero-title">Build a business in minutes, give it away forever</h1>
+            <p class="hero-subtitle">AI-generated startups, gifted to people who need them most</p>
+            <p class="hero-description">Cooper was born from a simple thought — what if AI could build businesses for people who need financial freedom? Each Cooper startup is generated, tested, automated, and gifted to someone ready to run it.</p>
+        </div>
+
+        <!-- Flow Section -->
+        <div class="flow-section">
+            <h2 class="flow-title">How Cooper Works</h2>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Idea Generation</h3>
+                    <p class="step-description">AI analyzes real-world market signals, trends, and opportunities to generate viable business ideas with real demand.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Auto-Build</h3>
+                    <p class="step-description">Cooper automatically creates the website, marketing materials, social presence, and operational systems for each business.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Test & Validate</h3>
+                    <p class="step-description">Each business is tested in the real world with actual customers to validate the model and ensure viability.</p>
+                </div>
+                <div class="flow-step">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Gift & Transfer</h3>
+                    <p class="step-description">Validated businesses are gifted to deserving entrepreneurs who are ready to run them, complete with training and support.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3 class="feature-title">AI-First Approach</h3>
+                <p class="feature-description">Every aspect of business creation is powered by artificial intelligence, from market research to operational setup.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Lightning Fast</h3>
+                <p class="feature-description">What takes humans months, Cooper does in minutes. From idea to launch in the time it takes to drink coffee.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Market-Validated</h3>
+                <p class="feature-description">Every business is tested with real customers before transfer, ensuring actual viability and revenue potential.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3 class="feature-title">Completely Free</h3>
+                <p class="feature-description">Businesses are gifted to deserving entrepreneurs. No equity taken, no fees charged — pure opportunity creation.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">Full Training</h3>
+                <p class="feature-description">Recipients get complete training, documentation, and ongoing support to successfully run their new business.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Global Impact</h3>
+                <p class="feature-description">Creating businesses and opportunities in markets that need them most, with a focus on emerging economies.</p>
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section">
+            <h2 class="timeline-title">The Journey</h2>
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 1: Foundation (Q1 2025)</div>
+                <div class="timeline-content">Core AI development, business idea generation algorithms, and initial testing framework.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 2: Beta Testing (Q2 2025)</div>
+                <div class="timeline-content">Launch with 10 pilot businesses, validate the model, and refine the gifting process.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 3: Public Launch (Q3 2025)</div>
+                <div class="timeline-content">Open waitlist, begin regular business generation and gifting cycles.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Phase 4: Scale (2026)</div>
+                <div class="timeline-content">Expand to 100+ businesses per month, add new business types, and international markets.</div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Ready to Receive a Business?</h2>
+            <p class="cta-description">Join thousands of aspiring entrepreneurs waiting to receive their AI-generated business. Be the first to know when Cooper launches.</p>
+            
+            <form class="waitlist-form" onsubmit="handleSubmit(event)">
+                <input type="email" class="waitlist-input" placeholder="Enter your email" required>
+                <button type="submit" class="waitlist-button">Join Waitlist</button>
+            </form>
+            
+            <p style="color: #9f9f9f; margin-top: 30px; font-size: 14px;">
+                <strong>3,247</strong> people are already on the waitlist
+            </p>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="feature-card" style="margin-top: 80px; text-align: left;">
+            <h3 style="color: #f0f0f0; font-size: 24px; margin-bottom: 20px;">The Philosophy Behind Cooper</h3>
+            <p style="color: #9f9f9f; line-height: 1.8; margin-bottom: 20px;">
+                Traditional entrepreneurship is broken. It requires capital, connections, and years of experience that most people simply don't have. Cooper changes that equation.
+            </p>
+            <p style="color: #9f9f9f; line-height: 1.8; margin-bottom: 20px;">
+                We believe that business ownership shouldn't be a privilege — it should be an opportunity available to anyone with the drive to succeed. By removing the barriers to entry and providing proven, ready-to-run businesses, we're creating a new generation of entrepreneurs who might otherwise never have had the chance.
+            </p>
+            <p style="color: #0079FF; font-style: italic; font-size: 18px;">
+                "We're not just building businesses. We're building pathways to financial freedom, one AI-generated company at a time."
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="rohitbag233/rohitbag233/js/jquery.min.js"></script>
+    <script src="rohitbag233/rohitbag233/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Here you would normally send this to your backend
+            // For now, we'll just show a success message
+            alert('Thank you for joining the waitlist! We\'ll keep you updated.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

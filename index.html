@@ -4,10 +4,10 @@
   <!-- Required meta tags-->
   <meta charset="utf-8">
   <!-- Title-->
-  <title>Rohit | Portfolio</title>
+  <title>Rohit Bag — Building for people, not just metrics</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- Description-->
-  <meta name="description" content="Hi, It's me Rohit or Tiger Rohit. I am a Student, Graphics Designer, Verified Discord Developer and A Programmer (ofcourse, xD). I Like Watching Anime, Programming, Making Bots etc etc.">
+  <meta name="description" content="Rohit Bag — Creator • Founder • Builder from Mumbai. Obsessed with making ideas that scale and give people real opportunity. Founder of Reach Resolve & Resolvia. Building toward Type 1 civilization.">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Favicons-->
   <link rel = "icon" href = https://cdn.discordapp.com/attachments/916719429671338006/1074903513877987368/20230214_092730.png type = "image/x-icon"> 
@@ -58,11 +58,290 @@
       text-align: center;
     }
 
+    /* New styles for updated content */
+    .home-subtitle {
+      color: #cecece;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .stat-number {
+      color: #f0f0f0;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      color: #9f9f9f;
+      font-size: 14px;
+    }
+
+    .values-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .value-tag {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #f0f0f0;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .feature-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .feature-card h4 {
+      color: #f0f0f0;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card p {
+      color: #9f9f9f;
+      margin-bottom: 15px;
+    }
+
+    .btn-link {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .btn-link:hover {
+      color: #fff;
+    }
+
+    .timeline-list, .values-list {
+      list-style: none;
+      padding: 0;
+      margin: 15px 0;
+    }
+
+    .timeline-list li, .values-list li {
+      color: #9f9f9f;
+      margin-bottom: 8px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .timeline-list li::before, .values-list li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: #f0f0f0;
+    }
+
+    .section-subtitle {
+      color: #f0f0f0;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .theme-icon {
+      font-size: 24px;
+      color: #f0f0f0;
+    }
+
+    /* Newsletter Section */
+    .newsletter-section {
+      background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      border: 1px solid rgba(0, 121, 255, 0.2);
+      margin: 80px 0;
+    }
+
+    .newsletter-title {
+      color: #f0f0f0;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-description {
+      color: #9f9f9f;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      line-height: 1.8;
+    }
+
+    .newsletter-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 15px 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #f0f0f0;
+      font-size: 16px;
+    }
+
+    .newsletter-input::placeholder {
+      color: #9f9f9f;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #0079FF;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .newsletter-button {
+      background-color: #0079FF;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+      .theme-toggle {
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+      }
+      
+      .theme-icon {
+        font-size: 20px;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-input {
+        min-width: 100%;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Light theme styles */
+    body.theme-light {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    body.theme-light .home-subtitle,
+    body.theme-light .stat-label,
+    body.theme-light .value-tag,
+    body.theme-light .feature-card p,
+    body.theme-light .section-subtitle,
+    body.theme-light .bio-text,
+    body.theme-light .timeline-list li,
+    body.theme-light .values-list li {
+      color: #666;
+    }
+
+    body.theme-light .feature-card,
+    body.theme-light .value-tag,
+    body.theme-light .timeline-item,
+    body.theme-light .values-section {
+      background-color: rgba(0, 0, 0, 0.03);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.theme-light .home-name,
+    body.theme-light .stat-number,
+    body.theme-light .feature-card h4,
+    body.theme-light .section-title,
+    body.theme-light .section-subtitle,
+    body.theme-light .bio-card h3,
+    body.theme-light .timeline-section h6,
+    body.theme-light .values-section h6 {
+      color: #333;
+    }
+
+    body.theme-light .theme-toggle {
+      background-color: rgba(0, 0, 0, 0.1);
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+
+    body.theme-light .theme-icon {
+      color: #333;
+    }
 
 </style>
 </head>
 
 <body class="theme-dark">
+  <!-- Theme Toggle -->
+  <div class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+    <span class="theme-icon" id="themeIcon">🌙</span>
+  </div>
+  
   <!-- Preloader-->
   <div class="preloader">
     <div class="preloader-block">
@@ -81,10 +360,15 @@
     <div class="collapse navbar-collapse order-1 order-lg-0" id="navbarSupportedContent">
       <!-- Navbar menu-->
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#🎉"><h3>🎉</h3></a></li>
-        <li class="nav-item"><a class="nav-link" href="rohitbag233\rohitbag233\skills.html">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#Team">Team</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="vision.html">Vision</a></li>
+        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="cooper.html">Cooper</a></li>
+        <li class="nav-item"><a class="nav-link" href="youtube.html">YouTube</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="media-kit.html">Media Kit</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -95,11 +379,16 @@
         <div class="col-12 col-lg-8 home-content text-center">
           <h1 class="home-name">
             <big>
-            <big>Tiger <font color = # >  Rohit  </font> </big>
+            <big>Rohit <font color = # >  Bag  </font> </big>
           </big>
             <span>
           </span></h1>
-          <h4 class="cd-headline clip home-headline">Who <span class="cd-words-wrapper single-headline"><b class="is-visible">Am I ?</b></span></h4>
+          <h4 class="cd-headline clip home-headline">Building for people, not just metrics.</h4>
+          <p class="home-subtitle mt-3">Creator • Founder • Builder — Mumbai. Obsessed with making ideas that scale and give people real opportunity.</p>
+          <div class="mt-4">
+            <a href="contact.html" class="button-main mr-3">Work with me</a>
+            <a href="youtube.html" class="button-main button-scheme">Watch the Grind</a>
+          </div>
         </div>
       </div>
     </div>
@@ -121,6 +410,77 @@
       </div>
     </div>
   </section>
+  
+  <!-- About Snippet Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">About Rohit</h2>
+          <p class="section-description">I'm Rohit Bag — a founder from Mumbai on a mission to uplift people financially, unite humanity, and push Earth toward Type 1 civilization. I build products, teams, and stories that make progress contagious.</p>
+        </div>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="row mt-5">
+        <div class="col-md-3 col-6 text-center mb-4">
+          <h3 class="stat-number">2</h3>
+          <p class="stat-label">Companies Founded</p>
+        </div>
+        <div class="col-md-3 col-6 text-center mb-4">
+          <h3 class="stat-number">200+</h3>
+          <p class="stat-label">Day Vlog Challenge</p>
+        </div>
+        <div class="col-md-3 col-6 text-center mb-4">
+          <h3 class="stat-number">1M</h3>
+          <p class="stat-label">Subscriber Goal</p>
+        </div>
+        <div class="col-md-3 col-6 text-center mb-4">
+          <h3 class="stat-number">SIP</h3>
+          <p class="stat-label">Investment Strategy</p>
+        </div>
+      </div>
+      
+      <!-- What I Stand For -->
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h3 class="section-subtitle">What I Stand For</h3>
+          <div class="values-container">
+            <span class="value-tag">Innovation</span>
+            <span class="value-tag">Kindness</span>
+            <span class="value-tag">Obsession</span>
+            <span class="value-tag">Legacy</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mini-feature Cards -->
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card text-center">
+            <h4>Vision</h4>
+            <p>Building toward Type 1 civilization</p>
+            <a href="vision.html" class="btn-link">Learn More →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card text-center">
+            <h4>Projects</h4>
+            <p>Reach Resolve, Resolvia, Cooper & more</p>
+            <a href="projects.html" class="btn-link">View Projects →</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="feature-card text-center">
+            <h4>YouTube</h4>
+            <p>Documenting the real startup journey</p>
+            <a href="youtube.html" class="btn-link">Watch Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- About lightbox-->
   <div class="lightbox-wrapper" id="about" data-simplebar>
     <div class="container">
@@ -140,60 +500,81 @@
               </div>
             </div>
             <!-- Info section-->
-            <div class="info-section single-section">
-              <div class="row align-items-center">
-                <!-- Picture part-->
-                <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="rohitbag233\rohitbag233\img\aboutme.png" alt="About Picture"></div>
-                <!-- Content part-->
-                <div class="col-12 col-lg-7 info-content">
-                  <div class="content-block">
-                    <h2 class="content-subtitle">Who Am I?</h2>
-                    <hr>
-                    <h6 class="content-title">Hello! I'm Rohit or TigerRohit 👋</h6>
-                    <div class="content-description">
-                      <p>A normal introvert student aiming for Knowledges of World. I'm from Mumbai  but my hometown is Kolkata, India. I have a past experience of over 6 years and do my job very sincerely and skillfully. I love and enjoy making amazing stuff for all </p>
-                    </div>
-                    <address class="content-info">
-                      <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>Work-Info:</span>
-                          <p>Engineer Aspirant, Video Editor, Youtuber </p>
-                        </div>                       
-                        <div class="col-12 col-md-6 single-info"><span>Experience:</span>
-                          <p>6+ Years</p>
-                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>Age:</span>
-                          <p>17</p>
+                         <div class="info-section single-section">
+                           <div class="row align-items-center">
+                             <!-- Picture part-->
+                             <div class="col-12 col-lg-5 info-img"><img class="img-fluid img-thumbnail" src="rohitbag233\rohitbag233\img\aboutme.png" alt="About Picture"></div>
+                             <!-- Content part-->
+                             <div class="col-12 col-lg-7 info-content">
+                               <div class="content-block">
+                                 <h2 class="content-subtitle">About Rohit</h2>
+                                 <hr>
+                                 <h6 class="content-title">A restless builder from Mumbai who turned childhood curiosity and setbacks into a roadmap for change.</h6>
+                                 <div class="content-description">
+                                   <p>Rohit Bag is a visionary founder, creator, and storyteller from Mumbai. Since childhood, he's been driven by curiosity — dismantling toys, running experiments, and exploring the unknown. His early setbacks — from betrayal and social anxiety to a hand injury — became fuel to rise higher. Today, he leads creative and AI ventures that merge storytelling, innovation, and purpose.</p>
+                                   <p>He founded <strong>Reach Resolve</strong>, a storytelling company for creators and founders, and <strong>Resolvia</strong>, an AI automation firm redefining productivity. Rohit also runs multiple YouTube channels, documenting his journey to build the world's largest company — not for fame, but for humanity's progress.</p>
+                                 </div>
+                                 <address class="content-info">
+                                   <div class="row">
+                                     <div class="col-12 col-md-6 single-info"><span>Founder:</span>
+                                       <p>Reach Resolve & Resolvia</p>
+                                     </div>
+                                     <div class="col-12 col-md-6 single-info"><span>Location:</span>
+                                       <p>Mumbai, India</p>
+                                      </div>
+                                   </div>
+                                   <div class="row">
+                                     <div class="col-12 col-md-6 single-info"><span>Vlog Challenge:</span>
+                                       <p>200+ days since June 13, 2025</p>
+                                     </div>
+                                     <div class="col-12 col-md-6 single-info"><span>Goal:</span>
+                                       <p>1M YouTube subscribers</p>
+                                     </div>
+                                   </div>
+                                   <div class="row">
+                                     <div class="col-12 col-md-6 single-info"><span>Investment:</span>
+                                       <p>Mutual Funds (SIP Strategy)</p>
+                                     </div>
+                                     <div class="col-12 col-md-6 single-info"><span>Email:</span>
+                                       <p><a href="mailto:hello@rohitbag.com">hello@rohitbag.com</a></p>
+                                     </div>
+                                   </div>
+                                   <hr>
+                                 </address>
+                                 <div class="timeline-section mt-4">
+                                   <h6 class="content-title">Timeline Highlights</h6>
+                                   <ul class="timeline-list">
+                                     <li><strong>2010–2016:</strong> Early curiosity, first experiments</li>
+                                     <li><strong>2019:</strong> Plastic-to-fuel prototype; early YouTube tests</li>
+                                     <li><strong>2020–21:</strong> Faced bullying; learned resilience</li>
+                                     <li><strong>2023:</strong> Freelancing era; joined forces with Dynamic; Reach Resolve born</li>
+                                     <li><strong>2024–25:</strong> Dropped college; built Resolvia; launched Cooper concept</li>
+                                   </ul>
+                                 </div>
+                                 <div class="values-section mt-4">
+                                   <h6 class="content-title">Core Values</h6>
+                                   <ul class="values-list">
+                                     <li>Build to scale human opportunity</li>
+                                     <li>Radical curiosity</li>
+                                     <li>Ruthless execution</li>
+                                     <li>Kindness and honesty</li>
+                                   </ul>
+                                 </div>
+                                   <ul class="list-unstyled list-inline content-follow">
+                                     <li class="list-inline-item"><a href="https://twitter.com/@Rohitbag233"><img src="rohitbag233\rohitbag233\img\twitter.png" alt="Clickable Image" width="30" height="30"> </a></li>
+                                     <li class="list-inline-item"><a href="https://instagram.com/Rohitbag233"><img src="rohitbag233\rohitbag233\img\instagram.png" alt="Clickable Image" width="30" height="30"> </a></li>
+                                     <li class="list-inline-item"><a href="https://youtube.com/@TigerRohit"><img src="rohitbag233\rohitbag233\img\youtube-icon.png" alt="YouTube" width="30" height="30"> </a></li>
+                                   </ul>
+                                   </div>
+                                 </div>
+                                </div>
+                               </div>
+                              </div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
                         </div>
-                        <div class="col-12 col-md-6 single-info"><span>Personality:</span>
-                          <p>introvert</p>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-md-6 single-info"><span>From:</span>
-                          <p>Mumbai, India</p>
-                        </div>
-                        <div class="col-12 col-md-6 single-info"><span>Email:</span>
-                          <p><a href="rohitbag959@gmail.com">rohitbag959@gmail.com</a></p>
-                        </div>
-                      </div>
-                      <hr>
-                    </address>
-                      <ul class="list-unstyled list-inline content-follow">
-                        <li class="list-inline-item"><a href="https://twitter.com/@Rohitbag233"><img src="rohitbag233\rohitbag233\img\twitter.png" alt="Clickable Image" width="30" height="30"> </a></li></a></li>
-                        <li class="list-inline-item"><a href="https://instagram.com/Rohitbag233"><img src="rohitbag233\rohitbag233\img\instagram.png" alt="Clickable Image" width="30" height="30"> </a></li></a></li> 
-                      </ul>
-                      </div>
-                    </div>
-                   </div>
-                  </div>
-                 </div>
-                </div>
-               </div>
-              </div>
-             </div>
-           </div>
           </div>
          </div>
        </div>
@@ -336,6 +717,18 @@
 
 
         </div>
+  
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <h2 class="newsletter-title">Stay Connected</h2>
+    <p class="newsletter-description">Join thousands of readers getting weekly insights on building companies, innovation, and the journey toward Type 1 civilization.</p>
+    
+    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+      <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+      <button type="submit" class="newsletter-button">Subscribe</button>
+    </form>
+  </section>
+  
   <!-- removeIf(customizerDist)-->
   <div class="demo-tool">
     <div class="tool-wrapper">
@@ -386,6 +779,87 @@
   <!-- removeIf(customizerDist)-->
   <script src="rohitbag233\rohitbag233\customizer\main.js"></script>
   <!-- endremoveIf(customizerDist)-->
+  
+  <!-- Custom JavaScript -->
+  <script>
+    // Theme Toggle functionality
+    function toggleTheme() {
+      const body = document.body;
+      const themeIcon = document.getElementById('themeIcon');
+      
+      if (body.classList.contains('theme-dark')) {
+        body.classList.remove('theme-dark');
+        body.classList.add('theme-light');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.remove('theme-light');
+        body.classList.add('theme-dark');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    
+    // Load saved theme on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      const themeIcon = document.getElementById('themeIcon');
+      
+      if (savedTheme === 'light') {
+        document.body.classList.remove('theme-dark');
+        document.body.classList.add('theme-light');
+        themeIcon.textContent = '☀️';
+      }
+    });
+    
+    // Newsletter form submission
+    function handleNewsletterSubmit(event) {
+      event.preventDefault();
+      const email = event.target.querySelector('input[type="email"]').value;
+      
+      // Here you would normally send this to your backend
+      // For now, we'll show a success message
+      alert('Thank you for subscribing! You\'ll receive weekly insights at: ' + email);
+      event.target.reset();
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Add animation to stats when they come into view
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe stat numbers and feature cards
+    document.addEventListener('DOMContentLoaded', function() {
+      const statNumbers = document.querySelectorAll('.stat-number');
+      const featureCards = document.querySelectorAll('.feature-card');
+      
+      statNumbers.forEach(stat => observer.observe(stat));
+      featureCards.forEach(card => observer.observe(card));
+    });
+  </script>
 </body>
 
 </html>
