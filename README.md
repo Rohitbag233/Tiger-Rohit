@@ -2,36 +2,51 @@
 
 > Building for people, not just metrics.
 
-A modern, dynamic personal portfolio built with React, Supabase, and purpose. This isn't just a website—it's a platform to share my journey, vision, and mission to push Earth toward Type 1 civilization.
+A modern, dynamic personal portfolio now available in **Pure HTML, CSS, and JavaScript**! All features work without frameworks—just open and run.
+
+## 🎯 Choose Your Version
+
+- **📄 Vanilla JS (Current)** - Pure HTML/CSS/JS, no build step required → [README-VANILLA.md](README-VANILLA.md)
+- **⚛️ React Version** - Original React app with build tools → [README-REACT.md](README-REACT.md)
+
+This portfolio is a platform to share my journey, vision, and mission to push Earth toward Type 1 civilization.
 
 ## ✨ What's New
 
-This portfolio has been completely rebuilt from static HTML to a modern React application with:
+**Now in Pure Vanilla JavaScript!** No build tools, no frameworks, just open and run.
 
-- 🎨 **Dynamic Content Management** - Update content without touching code
-- 📖 **Interactive Life Story** - My complete journey from 4th standard to founding Cooper
-- 💬 **Advice Museum** - Community wall for sharing wisdom
+- ✅ **Zero Dependencies** - Pure HTML, CSS, and JavaScript
+- 🎨 **Dynamic Content Management** - Supabase integration (optional)
+- 📖 **All Pages Working** - Story, Vision, Projects, Blog, Team, Contact
+- 💬 **Advice Museum** - Community wall for sharing wisdom (with database)
 - 🌓 **Dark/Light Theme** - With localStorage persistence
 - ♿ **Accessibility Mode** - Enhanced readability
 - 📱 **Mobile-First** - Optimized for every device
-- ✨ **Smooth Animations** - Framer Motion powered reveals
-- 🛠️ **Admin Panel** - Manage everything from one place
+- ✨ **Smooth Animations** - CSS + Intersection Observer
+- 🛠️ **Admin Panel** - Manage advice entries and more
+- ⚡ **Instant Load** - No build step, no bundling
 
 ## 🚀 Quick Start
 
-**Get running in 3 minutes:**
+**Get running in 30 seconds:**
 
 ```bash
-# 1. Install dependencies
-npm install
+# Just open in browser or serve with any server
+python -m http.server 8000
+# OR
+npx http-server
 
-# 2. Setup database (copy supabase-schema.sql to Supabase SQL Editor and run)
-
-# 3. Start dev server
-npm run dev
+# Then visit http://localhost:8000
 ```
 
-👉 **[Full Quick Start Guide](QUICK-START.md)**
+**That's it!** No npm install, no build, no configuration needed.
+
+For database features (Advice Museum, Contact Form, Admin):
+1. See [README-VANILLA.md](README-VANILLA.md) for Supabase setup
+2. Edit `js/config.js` with your credentials
+
+👉 **[Full Vanilla JS Guide](README-VANILLA.md)**  
+👉 **[React Version Guide](README-REACT.md)**
 
 ## 📚 Documentation
 
