@@ -1,14 +1,14 @@
 {
   "name": "rohit-portfolio",
-  "version": "2.0.0",
-  "description": "A comprehensive personal portfolio website for Rohit Bag, founder and creator building companies that scale human opportunity.",
+  "version": "3.0.0",
+  "description": "A comprehensive personal portfolio website for Rohit Bag - now in pure HTML, CSS, and JavaScript! Zero dependencies, instant load, all features preserved.",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "serve": "python3 -m http.server 8000",
+    "serve:alt": "npx http-server",
+    "setup-env": "node setup-env.js",
+    "dev": "npm run serve",
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,13 @@
   },
   "keywords": [
     "portfolio",
-    "react",
-    "supabase"
+    "vanilla-js",
+    "html",
+    "css",
+    "javascript",
+    "supabase",
+    "spa",
+    "no-framework"
   ],
   "author": "Rohit Bag",
   "license": "ISC",
@@ -25,18 +30,26 @@
     "url": "https://github.com/Rohitbag233/Tiger-Rohit/issues"
   },
   "homepage": "https://rohitbag233.github.io/Tiger-Rohit",
-  "dependencies": {
-    "@supabase/supabase-js": "^2.78.0",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "comment": "VANILLA JS VERSION - No dependencies required! Dependencies below are for React version only (see README-REACT.md)",
+  "dependencies": {},
+  "optionalDependencies": {
+    "@supabase/supabase-js": "^2.78.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  },
+  "reactDependencies": {
+    "comment": "These are only needed for the React version (index-react.html.bak)",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.552.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.9.5"
-  },
-  "devDependencies": {
+    "react-router-dom": "^7.9.5",
     "@vitejs/plugin-react": "^5.1.0",
     "eslint": "^9.39.0",
-    "gh-pages": "^6.3.0",
     "vite": "^7.1.12"
   }
 }

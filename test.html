@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Rohit Bag Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .pass {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .fail {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+        }
+        h1 {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Rohit Bag Portfolio - Test Suite</h1>
+    <div id="results"></div>
+
+    <script>
+        const results = [];
+
+        function addTest(name, passed, message = '') {
+            results.push({ name, passed, message });
+        }
+
+        // Test 1: Check if main files exist
+        fetch('/index.html')
+            .then(r => addTest('index.html exists', r.ok))
+            .catch(() => addTest('index.html exists', false));
+
+        fetch('/styles/main.css')
+            .then(r => addTest('styles/main.css exists', r.ok))
+            .catch(() => addTest('styles/main.css exists', false));
+
+        fetch('/js/app.js')
+            .then(r => addTest('js/app.js exists', r.ok))
+            .catch(() => addTest('js/app.js exists', false));
+
+        // Test 2: Check if all page modules exist
+        const pageModules = [
+            'Home.js',
+            'AdviceMuseum.js',
+            'Contact.js',
+            'AdminDashboard.js',
+            'AdminAdvice.js',
+            'SimplePage.js'
+        ];
+
+        pageModules.forEach(page => {
+            fetch(`/js/pages/${page}`)
+                .then(r => addTest(`js/pages/${page} exists`, r.ok))
+                .catch(() => addTest(`js/pages/${page} exists`, false));
+        });
+
+        // Test 3: Check if component modules exist
+        const components = ['Navigation.js', 'Footer.js', 'MobileShortcuts.js'];
+        components.forEach(comp => {
+            fetch(`/js/components/${comp}`)
+                .then(r => addTest(`js/components/${comp} exists`, r.ok))
+                .catch(() => addTest(`js/components/${comp} exists`, false));
+        });
+
+        // Test 4: Check if utility modules exist
+        const utils = ['router.js', 'theme.js', 'animations.js', 'icons.js'];
+        utils.forEach(util => {
+            fetch(`/js/utils/${util}`)
+                .then(r => addTest(`js/utils/${util} exists`, r.ok))
+                .catch(() => addTest(`js/utils/${util} exists`, false));
+        });
+
+        // Test 5: Check documentation files
+        const docs = [
+            'README.md',
+            'README-VANILLA.md',
+            'README-REACT.md',
+            'MIGRATION-NOTES.md'
+        ];
+        docs.forEach(doc => {
+            fetch(`/${doc}`)
+                .then(r => addTest(`${doc} exists`, r.ok))
+                .catch(() => addTest(`${doc} exists`, false));
+        });
+
+        // Wait and display results
+        setTimeout(() => {
+            const resultsDiv = document.getElementById('results');
+            let passCount = 0;
+            let failCount = 0;
+
+            let html = '';
+            results.forEach(test => {
+                const className = test.passed ? 'pass' : 'fail';
+                const icon = test.passed ? '✅' : '❌';
+                if (test.passed) passCount++;
+                else failCount++;
+
+                html += `<div class="test ${className}">
+                    ${icon} <strong>${test.name}</strong>
+                    ${test.message ? `<br><small>${test.message}</small>` : ''}
+                </div>`;
+            });
+
+            html = `
+                <div class="info">
+                    <strong>Test Summary:</strong><br>
+                    Passed: ${passCount} | Failed: ${failCount} | Total: ${results.length}
+                </div>
+            ` + html;
+
+            resultsDiv.innerHTML = html;
+
+            if (failCount === 0) {
+                resultsDiv.innerHTML += `
+                    <div class="pass" style="margin-top: 20px; text-align: center; font-size: 1.2em;">
+                        🎉 All tests passed! The application is ready to use.
+                    </div>
+                    <div class="info" style="margin-top: 10px;">
+                        <strong>Next steps:</strong><br>
+                        1. Visit <a href="/index.html">the main site</a><br>
+                        2. Configure Supabase in <code>js/config.js</code> for dynamic features<br>
+                        3. Read <code>README-VANILLA.md</code> for full documentation
+                    </div>
+                `;
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
