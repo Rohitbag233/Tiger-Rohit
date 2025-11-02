@@ -1,0 +1,42 @@
+{
+  "name": "rohit-portfolio",
+  "version": "2.0.0",
+  "description": "A comprehensive personal portfolio website for Rohit Bag, founder and creator building companies that scale human opportunity.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohitbag233/Tiger-Rohit.git"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "supabase"
+  ],
+  "author": "Rohit Bag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rohitbag233/Tiger-Rohit/issues"
+  },
+  "homepage": "https://rohitbag233.github.io/Tiger-Rohit",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.78.0",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.552.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.0",
+    "gh-pages": "^6.3.0",
+    "vite": "^7.1.12"
+  }
+}
