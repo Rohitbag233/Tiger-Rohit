@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Rohit Bag</title>
+    <meta name="description" content="Thoughts, insights, and stories from Rohit Bag's journey building companies and pushing toward Type 1 civilization.">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/main.css">
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/bootstrap-custom.css">
+    
+    <style>
+        body {
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+            color: #9f9f9f;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .blog-title {
+            color: #f0f0f0;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .blog-subtitle {
+            color: #cecece;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .article-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .article-card:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .article-category {
+            color: #0079FF;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+        
+        .article-title {
+            color: #f0f0f0;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .article-excerpt {
+            color: #9f9f9f;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #9f9f9f;
+            font-size: 14px;
+        }
+        
+        .article-date {
+            opacity: 0.7;
+        }
+        
+        .article-read-time {
+            opacity: 0.7;
+        }
+        
+        .featured-article {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-color: rgba(0, 121, 255, 0.3);
+            grid-column: span 2;
+        }
+        
+        .featured-article .article-category {
+            color: #0079FF;
+            background-color: rgba(0, 121, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .featured-article .article-title {
+            font-size: 32px;
+        }
+        
+        .featured-article .article-excerpt {
+            font-size: 18px;
+            color: #cecece;
+        }
+        
+        .newsletter-section {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 1px solid rgba(0, 121, 255, 0.2);
+            margin-bottom: 80px;
+        }
+        
+        .newsletter-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-description {
+            color: #9f9f9f;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #f0f0f0;
+            font-size: 16px;
+        }
+        
+        .newsletter-input::placeholder {
+            color: #9f9f9f;
+        }
+        
+        .newsletter-input:focus {
+            outline: none;
+            border-color: #0079FF;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        
+        .newsletter-button {
+            background-color: #0079FF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .categories-section {
+            margin-bottom: 80px;
+        }
+        
+        .categories-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .category-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .category-card:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-3px);
+        }
+        
+        .category-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .category-name {
+            color: #f0f0f0;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .category-count {
+            color: #9f9f9f;
+            font-size: 14px;
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .back-to-home a {
+            display: flex;
+            align-items: center;
+            color: #cecece;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            color: #f0f0f0;
+        }
+        
+        .back-to-home img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 36px;
+            }
+            
+            .featured-article {
+                grid-column: span 1;
+            }
+            
+            .featured-article .article-title {
+                font-size: 28px;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="rohitbag233/rohitbag233/img/TigerRohitLOGO.png" alt="Rohit Bag Logo">
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <div class="blog-container">
+        <!-- Header -->
+        <div class="blog-header">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-subtitle">Thoughts, insights, and stories from the journey of building companies and pushing toward Type 1 civilization.</p>
+        </div>
+
+        <!-- Featured Article -->
+        <div class="articles-grid">
+            <div class="article-card featured-article" onclick="openArticle('why-i-dropped-college')">
+                <div class="article-category">Featured • Personal Journey</div>
+                <h2 class="article-title">Why I Dropped College at 19</h2>
+                <p class="article-excerpt">A candid note on risk, conviction, and choosing the unconventional path. Sometimes the greatest education happens outside the classroom, and the biggest risks lead to the most meaningful rewards.</p>
+                <div class="article-meta">
+                    <span class="article-date">March 15, 2025</span>
+                    <span class="article-read-time">8 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Regular Articles -->
+        <div class="articles-grid">
+            <div class="article-card" onclick="openArticle('broken-elbow-built-grit')">
+                <div class="article-category">Personal Growth</div>
+                <h3 class="article-title">How a Broken Elbow Built My Grit</h3>
+                <p class="article-excerpt">Lessons from pain to purpose. That injury wasn't just a setback — it was the forge where resilience was born, and the catalyst that changed everything.</p>
+                <div class="article-meta">
+                    <span class="article-date">March 10, 2025</span>
+                    <span class="article-read-time">6 min read</span>
+                </div>
+            </div>
+
+            <div class="article-card" onclick="openArticle('plastic-to-petrol-prototype')">
+                <div class="article-category">Innovation</div>
+                <h3 class="article-title">From Plastic to Petrol Prototype to Entrepreneur</h3>
+                <p class="article-excerpt">Curiosity as destiny. How a childhood experiment with waste materials sparked a journey of innovation and set the foundation for everything that followed.</p>
+                <div class="article-meta">
+                    <span class="article-date">March 5, 2025</span>
+                    <span class="article-read-time">10 min read</span>
+                </div>
+            </div>
+
+            <div class="article-card" onclick="openArticle('building-reach-resolve')">
+                <div class="article-category">Business</div>
+                <h3 class="article-title">Building Reach Resolve: The Story</h3>
+                <p class="article-excerpt">How a partnership with Dynamic transformed into a storytelling powerhouse. The journey from freelancing to building a company that helps creators scale.</p>
+                <div class="article-meta">
+                    <span class="article-date">February 28, 2025</span>
+                    <span class="article-read-time">12 min read</span>
+                </div>
+            </div>
+
+            <div class="article-card" onclick="openArticle('cooper-ai-business-generation')">
+                <div class="article-category">Technology</div>
+                <h3 class="article-title">Cooper: AI-Generated Businesses for Everyone</h3>
+                <p class="article-excerpt">The vision behind Cooper and how AI can democratize entrepreneurship. Building systems that create opportunities, not just companies.</p>
+                <div class="article-meta">
+                    <span class="article-date">February 20, 2025</span>
+                    <span class="article-read-time">15 min read</span>
+                </div>
+            </div>
+
+            <div class="article-card" onclick="openArticle('type-1-civilization-vision')">
+                <div class="article-category">Vision</div>
+                <h3 class="article-title">Type 1 Civilization: Why It Matters</h3>
+                <p class="article-excerpt">Beyond business goals and startup success. The long-term vision for humanity and why every company I build connects to this bigger picture.</p>
+                <div class="article-meta">
+                    <span class="article-date">February 15, 2025</span>
+                    <span class="article-read-time">20 min read</span>
+                </div>
+            </div>
+
+            <div class="article-card" onclick="openArticle('200-day-vlog-challenge')">
+                <div class="article-category">Content Creation</div>
+                <h3 class="article-title">200 Days of Vlogging: What I Learned</h3>
+                <p class="article-excerpt">The insights from documenting every single day. Consistency, authenticity, and the unexpected lessons from sharing the journey publicly.</p>
+                <div class="article-meta">
+                    <span class="article-date">February 10, 2025</span>
+                    <span class="article-read-time">7 min read</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="categories-section">
+            <h2 class="categories-title">Explore by Topic</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('personal-journey')">
+                    <div class="category-icon">👤</div>
+                    <h3 class="category-name">Personal Journey</h3>
+                    <p class="category-count">12 articles</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('business')">
+                    <div class="category-icon">💼</div>
+                    <h3 class="category-name">Business</h3>
+                    <p class="category-count">18 articles</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('technology')">
+                    <div class="category-icon">🤖</div>
+                    <h3 class="category-name">Technology</h3>
+                    <p class="category-count">15 articles</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('vision')">
+                    <div class="category-icon">🌍</div>
+                    <h3 class="category-name">Vision</h3>
+                    <p class="category-count">8 articles</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('lessons')">
+                    <div class="category-icon">📚</div>
+                    <h3 class="category-name">Lessons</h3>
+                    <p class="category-count">22 articles</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('innovation')">
+                    <div class="category-icon">💡</div>
+                    <h3 class="category-name">Innovation</h3>
+                    <p class="category-count">11 articles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div class="newsletter-section">
+            <h2 class="newsletter-title">Get New Articles in Your Inbox</h2>
+            <p class="newsletter-description">Join thousands of readers who get weekly insights on building companies, innovation, and the journey toward Type 1 civilization.</p>
+            
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Writing Philosophy -->
+        <div class="article-card" style="text-align: left;">
+            <h3 style="color: #f0f0f0; font-size: 24px; margin-bottom: 20px;">Why I Write</h3>
+            <p style="color: #9f9f9f; line-height: 1.8; margin-bottom: 20px;">
+                Writing isn't just content creation — it's thinking made visible. Every article is a chance to clarify my thoughts, share lessons learned, and hopefully help someone else on their journey. I write about the real stuff: the failures, the breakthroughs, the questions that keep me up at night.
+            </p>
+            <p style="color: #9f9f9f; line-height: 1.8; margin-bottom: 20px;">
+                Some posts will be about building companies. Others will be about personal growth, technology, or the big picture vision that drives everything. But they'll all be honest, practical, and written with the hope that they might make your journey a little easier.
+            </p>
+            <p style="color: #0079FF; font-style: italic; font-size: 18px;">
+                "I write to understand what I think. If it helps others understand too, that's a bonus."
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="rohitbag233/rohitbag233/js/jquery.min.js"></script>
+    <script src="rohitbag233/rohitbag233/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function openArticle(articleId) {
+            // In a real implementation, this would navigate to the full article
+            // For now, we'll show a placeholder message
+            alert('Article "' + articleId + '" would open here. Full article pages would be implemented in a complete version.');
+        }
+        
+        function filterByCategory(category) {
+            // In a real implementation, this would filter the articles
+            alert('Filtering by category: ' + category + '. This would show only articles from this category.');
+        }
+        
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            
+            // Here you would normally send this to your backend
+            alert('Thank you for subscribing! You\'ll receive new articles at: ' + email);
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

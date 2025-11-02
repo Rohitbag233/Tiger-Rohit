@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Rohit Bag</title>
+    <meta name="description" content="Meet the core team behind Rohit Bag's ventures. The people building the future of entrepreneurship and AI automation.">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/main.css">
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/bootstrap-custom.css">
+    
+    <style>
+        body {
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+            color: #9f9f9f;
+        }
+        
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .team-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .team-title {
+            color: #f0f0f0;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .team-subtitle {
+            color: #cecece;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .team-member {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-member:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .team-member.founder {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-color: rgba(0, 121, 255, 0.3);
+        }
+        
+        .founder-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #0079FF;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #0079FF;
+            overflow: hidden;
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            color: #f0f0f0;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .member-title {
+            color: #0079FF;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .member-description {
+            color: #9f9f9f;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+        
+        .member-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .skill-tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #cecece;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9f9f9f;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: rgba(0, 121, 255, 0.2);
+            color: #0079FF;
+        }
+        
+        .culture-section {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(0, 121, 255, 0.2);
+        }
+        
+        .culture-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .value-card {
+            text-align: center;
+        }
+        
+        .value-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #0079FF;
+        }
+        
+        .value-title {
+            color: #f0f0f0;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .value-description {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        .join-section {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .join-title {
+            color: #f0f0f0;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .join-description {
+            color: #9f9f9f;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        .join-button {
+            background-color: #0079FF;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .join-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .back-to-home a {
+            display: flex;
+            align-items: center;
+            color: #cecece;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            color: #f0f0f0;
+        }
+        
+        .back-to-home img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .team-title {
+                font-size: 36px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="rohitbag233/rohitbag233/img/TigerRohitLOGO.png" alt="Rohit Bag Logo">
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <div class="team-container">
+        <!-- Header -->
+        <div class="team-header">
+            <h1 class="team-title">Core Team</h1>
+            <p class="team-subtitle">The passionate builders, creators, and innovators working to reshape the future of entrepreneurship and human potential.</p>
+        </div>
+
+        <!-- Team Members Grid -->
+        <div class="team-grid">
+            <!-- Rohit Bag -->
+            <div class="team-member founder">
+                <div class="founder-badge">Founder</div>
+                <div class="member-photo">
+                    <img src="rohitbag233/rohitbag233/img/aboutme.png" alt="Rohit Bag">
+                </div>
+                <h2 class="member-name">Rohit Bag</h2>
+                <p class="member-title">Co-founder, Vision & Product</p>
+                <p class="member-description">Visionary founder driving the mission toward Type 1 civilization. Leads product strategy, company vision, and long-term planning across all ventures.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Product Vision</span>
+                    <span class="skill-tag">Strategy</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Innovation</span>
+                </div>
+                <div class="member-social">
+                    <a href="https://youtube.com/@TigerRohit" target="_blank" class="social-link">🎬</a>
+                    <a href="https://twitter.com/@Rohitbag233" target="_blank" class="social-link">🐦</a>
+                    <a href="https://instagram.com/rohitbag233" target="_blank" class="social-link">📷</a>
+                </div>
+            </div>
+
+            <!-- Dynamic -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="rohitbag233/rohitbag233/img/Dynamic.jpg" alt="Dynamic">
+                </div>
+                <h2 class="member-name">Dynamic</h2>
+                <p class="member-title">Co-founder, Operations</p>
+                <p class="member-description">Operational excellence expert ensuring smooth execution across all ventures. Manages day-to-day operations, team coordination, and process optimization.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Operations</span>
+                    <span class="skill-tag">Video Editing</span>
+                    <span class="skill-tag">Team Management</span>
+                    <span class="skill-tag">Process Design</span>
+                </div>
+                <div class="member-social">
+                    <a href="#" target="_blank" class="social-link">🎬</a>
+                    <a href="#" target="_blank" class="social-link">🐦</a>
+                    <a href="#" target="_blank" class="social-link">📷</a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="rohitbag233/rohitbag233/img/lemon.jpg" alt="Lemon Headphones">
+                </div>
+                <h2 class="member-name">Lemon Headphones</h2>
+                <p class="member-title">Outreach & Client Relations</p>
+                <p class="member-description">Client relationship specialist focused on growth, engagement, and content strategy. Ensures our clients and community feel valued and supported.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Client Relations</span>
+                    <span class="skill-tag">Growth Strategy</span>
+                    <span class="skill-tag">Content Strategy</span>
+                    <span class="skill-tag">Communication</span>
+                </div>
+                <div class="member-social">
+                    <a href="#" target="_blank" class="social-link">🎬</a>
+                    <a href="#" target="_blank" class="social-link">🐦</a>
+                    <a href="#" target="_blank" class="social-link">📷</a>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="rohitbag233/rohitbag233/img/aimless.jpg" alt="Aimless">
+                </div>
+                <h2 class="member-name">Aimless</h2>
+                <p class="member-title">Tech & Infrastructure Support</p>
+                <p class="member-description">Technical infrastructure expert ensuring our systems run smoothly. Handles development, deployment, and technical support across all platforms.</p>
+                <div class="member-skills">
+                    <span class="skill-tag">Technical Support</span>
+                    <span class="skill-tag">Infrastructure</span>
+                    <span class="skill-tag">Development</span>
+                    <span class="skill-tag">Problem Solving</span>
+                </div>
+                <div class="member-social">
+                    <a href="#" target="_blank" class="social-link">🎬</a>
+                    <a href="#" target="_blank" class="social-link">🐦</a>
+                    <a href="#" target="_blank" class="social-link">📷</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Culture Section -->
+        <div class="culture-section">
+            <h2 class="culture-title">Our Culture & Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3 class="value-title">Build to Scale</h3>
+                    <p class="value-description">Everything we create is designed to scale human opportunity and make lasting impact.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔍</div>
+                    <h3 class="value-title">Radical Curiosity</h3>
+                    <p class="value-description">We question everything, explore relentlessly, and never stop learning.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚡</div>
+                    <h3 class="value-title">Ruthless Execution</h3>
+                    <p class="value-description">Ideas are worthless without execution. We move fast and deliver consistently.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💙</div>
+                    <h3 class="value-title">Kindness First</h3>
+                    <p class="value-description">We lead with empathy, support each other, and build for people, not metrics.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3 class="value-title">Mission-Driven</h3>
+                    <p class="value-description">Every project connects to our bigger vision of uplifting humanity.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3 class="value-title">Global Impact</h3>
+                    <p class="value-description">We think globally and build solutions that work for everyone, everywhere.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Team Section -->
+        <div class="join-section">
+            <h2 class="join-title">Join Our Mission</h2>
+            <p class="join-description">We're always looking for passionate builders who want to create meaningful impact. If you share our vision and want to help build the future, we'd love to hear from you.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="join-button">Get in Touch</a>
+                <a href="#" class="join-button" style="background-color: transparent; border: 2px solid #0079FF; color: #0079FF;">View Openings</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="rohitbag233/rohitbag233/js/jquery.min.js"></script>
+    <script src="rohitbag233/rohitbag233/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

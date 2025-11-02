@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rohit Bag</title>
+    <meta name="description" content="Explore Rohit Bag's ventures: Reach Resolve, Resolvia, Cooper, and more. Building companies that scale human opportunity.">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/main.css">
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/bootstrap-custom.css">
+    
+    <style>
+        body {
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+            color: #9f9f9f;
+        }
+        
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .projects-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .projects-title {
+            color: #f0f0f0;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .projects-subtitle {
+            color: #cecece;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .project-title-section h2 {
+            color: #f0f0f0;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .project-tagline {
+            color: #0079FF;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .project-role {
+            color: #9f9f9f;
+            font-size: 16px;
+        }
+        
+        .project-status {
+            background-color: rgba(0, 121, 255, 0.1);
+            color: #0079FF;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid rgba(0, 121, 255, 0.3);
+        }
+        
+        .project-status.stealth {
+            background-color: rgba(255, 165, 0, 0.1);
+            color: #ffa500;
+            border-color: rgba(255, 165, 0, 0.3);
+        }
+        
+        .project-status.on-hold {
+            background-color: rgba(255, 99, 71, 0.1);
+            color: #ff6347;
+            border-color: rgba(255, 99, 71, 0.3);
+        }
+        
+        .project-description {
+            color: #9f9f9f;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .project-features {
+            margin-bottom: 30px;
+        }
+        
+        .project-features h3 {
+            color: #f0f0f0;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            color: #9f9f9f;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #0079FF;
+            font-weight: bold;
+        }
+        
+        .project-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background-color: #0079FF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #0079FF;
+            padding: 12px 24px;
+            border: 1px solid #0079FF;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(0, 121, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .back-to-home a {
+            display: flex;
+            align-items: center;
+            color: #cecece;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            color: #f0f0f0;
+        }
+        
+        .back-to-home img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .project-highlight {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-color: rgba(0, 121, 255, 0.3);
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tag {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #cecece;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .projects-title {
+                font-size: 36px;
+            }
+            
+            .project-card {
+                padding: 30px 20px;
+            }
+            
+            .project-title-section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="rohitbag233/rohitbag233/img/TigerRohitLOGO.png" alt="Rohit Bag Logo">
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <div class="projects-container">
+        <!-- Header -->
+        <div class="projects-header">
+            <h1 class="projects-title">Projects</h1>
+            <p class="projects-subtitle">Building ventures that scale human opportunity, from creative storytelling to AI automation and beyond.</p>
+        </div>
+
+        <!-- Reach Resolve -->
+        <div class="project-card project-highlight">
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h2>Reach Resolve</h2>
+                    <p class="project-tagline">Video editing & storytelling agency helping creators scale through cinematic content</p>
+                    <p class="project-role">Role: Co-founder & Strategy Lead</p>
+                </div>
+                <div class="project-status">Active</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Video Production</span>
+                <span class="tech-tag">Storytelling</span>
+                <span class="tech-tag">Content Strategy</span>
+                <span class="tech-tag">Brand Development</span>
+            </div>
+            
+            <p class="project-description">Reach Resolve transforms creators and founders into powerful storytellers. We specialize in cinematic video editing, brand narrative development, and content strategy that helps ambitious creators scale their impact and reach. From YouTube channels to brand documentaries, we craft stories that resonate and convert.</p>
+            
+            <div class="project-features">
+                <h3>What We Do</h3>
+                <ul class="feature-list">
+                    <li>Cinematic video editing for YouTube and social media</li>
+                    <li>Brand storytelling and narrative development</li>
+                    <li>Content strategy and channel optimization</li>
+                    <li>Thumbnail design and visual branding</li>
+                    <li>Growth consulting for creators and founders</li>
+                </ul>
+            </div>
+            
+            <div class="project-cta">
+                <a href="contact.html" class="btn-primary">Hire Us</a>
+                <a href="#" class="btn-secondary">View Case Studies</a>
+            </div>
+        </div>
+
+        <!-- Resolvia -->
+        <div class="project-card project-highlight">
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h2>Resolvia</h2>
+                    <p class="project-tagline">AI automation company building intelligent systems to automate growth, operations, and marketing</p>
+                    <p class="project-role">Role: Co-founder & Product Lead</p>
+                </div>
+                <div class="project-status">Active</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">AI Automation</span>
+                <span class="tech-tag">Process Optimization</span>
+                <span class="tech-tag">Marketing Automation</span>
+                <span class="tech-tag">Custom Solutions</span>
+            </div>
+            
+            <p class="project-description">Resolvia is redefining productivity through intelligent automation. We build custom AI solutions that handle repetitive tasks, optimize workflows, and scale business operations without scaling headcount. From marketing automation to operational efficiency, we help businesses work smarter, not harder.</p>
+            
+            <div class="project-features">
+                <h3>Core Solutions</h3>
+                <ul class="feature-list">
+                    <li>Custom AI automation for business processes</li>
+                    <li>Marketing automation and lead generation systems</li>
+                    <li>Operational workflow optimization</li>
+                    <li>Customer service automation</li>
+                    <li>Data analysis and insights generation</li>
+                </ul>
+            </div>
+            
+            <div class="project-cta">
+                <a href="contact.html" class="btn-primary">Book a Call</a>
+                <a href="#" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Cooper -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h2>Cooper</h2>
+                    <p class="project-tagline">A platform that creates AI-built businesses for people — idea to execution</p>
+                    <p class="project-role">Role: Founder & Product Vision</p>
+                </div>
+                <div class="project-status">In Development</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">AI Business Generation</span>
+                <span class="tech-tag">Automation</span>
+                <span class="tech-tag">Marketplace</span>
+                <span class="tech-tag">Entrepreneurship</span>
+            </div>
+            
+            <p class="project-description">Cooper was born from a simple thought — what if AI could build businesses for people who need financial freedom? Each Cooper startup is generated, tested, automated, and gifted to someone ready to run it. We're creating a world where anyone can own a successful business, regardless of their starting point.</p>
+            
+            <div class="project-features">
+                <h3>How It Works</h3>
+                <ul class="feature-list">
+                    <li>Idea generation via real-world market signals</li>
+                    <li>Auto-website and marketing agent creation</li>
+                    <li>Automated operations dashboard</li>
+                    <li>Business validation and testing</li>
+                    <li>Transfer to ready entrepreneurs</li>
+                </ul>
+            </div>
+            
+            <div class="project-cta">
+                <a href="#" class="btn-primary">Join the Waitlist</a>
+                <a href="cooper.html" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Fashion Styling App -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h2>Fashion Styling App</h2>
+                    <p class="project-tagline">AI-powered outfit suggestions and fashion recommendations</p>
+                    <p class="project-role">Role: Product Strategy</p>
+                </div>
+                <div class="project-status stealth">Stealth Mode</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">AI Fashion</span>
+                <span class="tech-tag">Style Recommendations</span>
+                <span class="tech-tag">Mobile App</span>
+                <span class="tech-tag">Computer Vision</span>
+            </div>
+            
+            <p class="project-description">An innovative mobile application that suggests outfit combinations using AI technology. The app analyzes user preferences, current fashion trends, weather conditions, and personal wardrobe to create personalized styling recommendations. Currently in confidential development with groundbreaking features planned.</p>
+            
+            <div class="project-cta">
+                <a href="#" class="btn-secondary">Coming Soon</a>
+            </div>
+        </div>
+
+        <!-- Oops Charger -->
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title-section">
+                    <h2>Oops Charger</h2>
+                    <p class="project-tagline">Smart app that alerts users if the phone isn't charging properly</p>
+                    <p class="project-role">Role: Concept & Design</p>
+                </div>
+                <div class="project-status on-hold">On Hold</div>
+            </div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Mobile Utility</span>
+                <span class="tech-tag">Battery Monitoring</span>
+                <span class="tech-tag">Alert System</span>
+            </div>
+            
+            <p class="project-description">A simple but essential mobile utility app that monitors phone charging behavior and alerts users when their device isn't charging properly. The app detects faulty cables, poor connections, or charging issues before they become problems. Currently on hold while focusing on primary ventures.</p>
+            
+            <div class="project-cta">
+                <a href="#" class="btn-secondary">Potential Relaunch</a>
+            </div>
+        </div>
+
+        <!-- Future Projects Section -->
+        <div class="project-card" style="text-align: center; background-color: rgba(255, 255, 255, 0.05);">
+            <h2 style="color: #f0f0f0; margin-bottom: 20px;">Always Building</h2>
+            <p style="color: #9f9f9f; margin-bottom: 30px;">These are just the beginning. I'm constantly exploring new ideas, identifying problems worth solving, and building solutions that scale. From education technology to sustainable energy solutions, the pipeline is always full.</p>
+            <p style="color: #cecece; font-style: italic;">"The best way to predict the future is to build it." — Peter Drucker</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="rohitbag233/rohitbag233/js/jquery.min.js"></script>
+    <script src="rohitbag233/rohitbag233/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

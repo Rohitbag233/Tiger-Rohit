@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rohit Bag</title>
+    <meta name="description" content="Get in touch with Rohit Bag for collaborations, partnerships, speaking engagements, or media inquiries. Let's create something extraordinary together.">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/main.css">
+    <link rel="stylesheet" href="rohitbag233/rohitbag233/css/bootstrap-custom.css">
+    
+    <style>
+        body {
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+            color: #9f9f9f;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .contact-title {
+            color: #f0f0f0;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .contact-subtitle {
+            color: #cecece;
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+        
+        .contact-form-section {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-title {
+            color: #f0f0f0;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            color: #cecece;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #f0f0f0;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input::placeholder, .form-textarea::placeholder {
+            color: #9f9f9f;
+        }
+        
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #0079FF;
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .submit-button {
+            background-color: #0079FF;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        
+        .submit-button:disabled {
+            background-color: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .contact-info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-title {
+            color: #f0f0f0;
+            font-size: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            color: #0079FF;
+        }
+        
+        .info-content {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        .info-link {
+            color: #0079FF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .info-link:hover {
+            color: #0056b3;
+        }
+        
+        .social-section {
+            background: linear-gradient(135deg, rgba(0, 121, 255, 0.1) 0%, rgba(0, 121, 255, 0.05) 100%);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            border: 1px solid rgba(0, 121, 255, 0.2);
+            margin-bottom: 80px;
+        }
+        
+        .social-title {
+            color: #f0f0f0;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .social-description {
+            color: #9f9f9f;
+            font-size: 16px;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 25px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #cecece;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .social-icon {
+            font-size: 20px;
+        }
+        
+        .faq-section {
+            margin-bottom: 80px;
+        }
+        
+        .faq-title {
+            color: #f0f0f0;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-question {
+            color: #f0f0f0;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer {
+            color: #9f9f9f;
+            line-height: 1.6;
+        }
+        
+        .back-to-home {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1000;
+        }
+        
+        .back-to-home a {
+            display: flex;
+            align-items: center;
+            color: #cecece;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        .back-to-home a:hover {
+            color: #f0f0f0;
+        }
+        
+        .back-to-home img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 36px;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form-section {
+                padding: 30px 20px;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <a href="index.html">
+            <img src="rohitbag233/rohitbag233/img/TigerRohitLOGO.png" alt="Rohit Bag Logo">
+            <span>Back to Home</span>
+        </a>
+    </div>
+
+    <div class="contact-container">
+        <!-- Header -->
+        <div class="contact-header">
+            <h1 class="contact-title">Work with Me</h1>
+            <p class="contact-subtitle">Let's collaborate, create, or automate something extraordinary. I'm always open to meaningful partnerships and exciting opportunities.</p>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <h2 class="form-title">Send a Message</h2>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="role">Role</label>
+                            <select id="role" name="role" class="form-select">
+                                <option value="">Select your role</option>
+                                <option value="creator">Content Creator</option>
+                                <option value="founder">Founder/Entrepreneur</option>
+                                <option value="investor">Investor</option>
+                                <option value="brand">Brand Representative</option>
+                                <option value="media">Media/Press</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="budget">Budget Range</label>
+                            <select id="budget" name="budget" class="form-select">
+                                <option value="">Select budget range</option>
+                                <option value="under-5k">Under $5,000</option>
+                                <option value="5k-15k">$5,000 - $15,000</option>
+                                <option value="15k-50k">$15,000 - $50,000</option>
+                                <option value="50k-100k">$50,000 - $100,000</option>
+                                <option value="over-100k">Over $100,000</option>
+                                <option value="discussion">Open to discussion</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" required placeholder="Tell me about your project, idea, or collaboration..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" id="submitBtn">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info-section">
+                <div class="info-card">
+                    <h3 class="info-title">
+                        <span class="info-icon">📧</span>
+                        Email
+                    </h3>
+                    <div class="info-content">
+                        <p>For general inquiries and collaborations:</p>
+                        <p><a href="mailto:hello@rohitbag.com" class="info-link">hello@rohitbag.com</a></p>
+                        <p style="margin-top: 15px;">For media and press inquiries:</p>
+                        <p><a href="mailto:media@rohitbag.com" class="info-link">media@rohitbag.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-title">
+                        <span class="info-icon">📍</span>
+                        Location
+                    </h3>
+                    <div class="info-content">
+                        <p>Mumbai, India</p>
+                        <p>Available for remote collaboration worldwide</p>
+                        <p>Open to travel for significant opportunities</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 class="info-title">
+                        <span class="info-icon">⏰</span>
+                        Response Time
+                    </h3>
+                    <div class="info-content">
+                        <p>Typically responds within 24-48 hours</p>
+                        <p>Priority for urgent media inquiries</p>
+                        <p>Weekend responses may be delayed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Section -->
+        <div class="social-section">
+            <h2 class="social-title">Connect on Social Media</h2>
+            <p class="social-description">Follow my journey and reach out through these platforms for more immediate responses.</p>
+            <div class="social-links">
+                <a href="https://youtube.com/@TigerRohit" target="_blank" class="social-link-button">
+                    <span class="social-icon">🎬</span>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://twitter.com/@Rohitbag233" target="_blank" class="social-link-button">
+                    <span class="social-icon">🐦</span>
+                    <span>Twitter</span>
+                </a>
+                <a href="https://instagram.com/rohitbag233" target="_blank" class="social-link-button">
+                    <span class="social-icon">📷</span>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://linkedin.com/in/rohitbag" target="_blank" class="social-link-button">
+                    <span class="social-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">What types of collaborations are you open to?</h3>
+                    <p class="faq-answer">I'm open to content collaborations, brand partnerships, speaking engagements, consulting projects, and strategic investments. Focus areas: AI automation, content creation, and scalable business solutions.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you offer consulting services?</h3>
+                    <p class="faq-answer">Yes, I offer strategic consulting for creators, startups, and companies looking to implement AI automation. Reach out with your specific needs for custom proposals.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Are you available for speaking engagements?</h3>
+                    <p class="faq-answer">I speak on entrepreneurship, AI automation, building in public, and the journey toward Type 1 civilization. Contact me with event details and budget.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How quickly do you respond to inquiries?</h3>
+                    <p class="faq-answer">I typically respond within 24-48 hours. Media inquiries get priority response. For urgent matters, please mention "Urgent" in your subject line.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Do you invest in startups?</h3>
+                    <p class="faq-answer">I'm actively looking for innovative startups in AI, content creation, and human empowerment technologies. Send your pitch deck and brief overview for consideration.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Can I work with your companies directly?</h3>
+                    <p class="faq-answer">Absolutely! Reach Resolve is always looking for talented creators and editors. Resolvia seeks AI/automation experts. Check the team page for current openings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="rohitbag233/rohitbag233/js/jquery.min.js"></script>
+    <script src="rohitbag233/rohitbag233/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formData = new FormData(event.target);
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            // Here you would normally send the form data to your backend
+            // For demo purposes, we'll simulate the process
+            setTimeout(() => {
+                // Show success message
+                alert('Thank you for your message! I\'ll get back to you within 24-48 hours.');
+                
+                // Reset form
+                event.target.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }, 2000);
+            
+            // In production, you would do something like:
+            // fetch('/api/contact', {
+            //     method: 'POST',
+            //     body: formData
+            // }).then(response => {
+            //     if (response.ok) {
+            //         // Show success message
+            //     } else {
+            //         // Show error message
+            //     }
+            // }).finally(() => {
+            //     // Re-enable button
+            // });
+        }
+    </script>
+</body>
+</html>
